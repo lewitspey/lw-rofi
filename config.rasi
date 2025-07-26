@@ -1,40 +1,38 @@
-
 * {
-  foreground:                  rgba(200, 200, 200, 100%);
-  normal-foreground:           @foreground;
-  normal-background:           rgba(0, 0, 0, 100%);
+foreground:                  rgba(220, 220, 220, 100%);
+normal-foreground:           @foreground;
 
-  selected-normal-background: rgba(255, 255, 255, 20%);  // Light grey hover
-  selected-normal-foreground: rgba(255, 255, 255, 100%); // Bright text
+normal-background:           rgba(0, 0, 0, 60%);
+background:                 rgba(0, 0, 0, 60%);
+background-color:           @background;
 
-  active-foreground:           rgba(180, 180, 255, 100%);
-  active-background:           rgba(0, 0, 0, 100%);
-  selected-active-foreground: rgba(0, 0, 0, 100%);
-  selected-active-background: rgba(150, 150, 255, 20%);
+selected-normal-background:  rgba(255, 255, 255, 30%);
+selected-normal-foreground: rgba(255, 255, 255, 100%);
 
-  urgent-foreground:           rgba(255, 80, 80, 100%);
-  urgent-background:           rgba(0, 0, 0, 100%);
-  selected-urgent-foreground: rgba(0, 0, 0, 100%);
-  selected-urgent-background: rgba(255, 80, 80, 20%);
+active-background:           rgba(0, 0, 0, 70%);
+active-foreground:           rgba(180, 180, 255, 100%);
 
-  alternate-normal-background: rgba(0, 0, 0, 0%);
-  alternate-normal-foreground: @foreground;
-  alternate-active-background: rgba(0, 0, 0, 0%);
-  alternate-active-foreground: @active-foreground;
-  alternate-urgent-background: rgba(0, 0, 0, 0%);
-  alternate-urgent-foreground: @urgent-foreground;
+selected-active-background: rgba(100, 100, 255, 30%);
+selected-active-foreground: rgba(0, 0, 0, 100%);
 
-  background:                 rgba(0, 0, 0, 100%);
-  background-color:           @background;
+urgent-background:           rgba(0, 0, 0, 70%);
+urgent-foreground:           rgba(255, 80, 80, 100%);
+selected-urgent-background:  rgba(255, 80, 80, 30%);
+selected-urgent-foreground:  rgba(0, 0, 0, 100%);
 
-  border-color:               rgba(100, 100, 100, 100%);
-  separatorcolor:             rgba(100, 100, 100, 100%);
+alternate-normal-background: rgba(0, 0, 0, 60%);
+alternate-normal-foreground: @foreground;
+alternate-active-background: rgba(0, 0, 0, 70%);
+alternate-active-foreground: @active-foreground;
+alternate-urgent-background: rgba(0, 0, 0, 70%);
+alternate-urgent-foreground: @urgent-foreground;
 
-  red:                        rgba(220, 50, 47, 100%);
-  blue:                       rgba(80, 130, 200, 100%);
+border-color:               rgba(150, 150, 150, 40%);
+separatorcolor:             rgba(150, 150, 150, 40%);
 
-  spacing: 2;
+spacing: 2;
 }
+
 
 window {
   width: 20%;
@@ -73,6 +71,7 @@ element {
 element-text {
   background-color: inherit;
   text-color:       inherit;
+  highlight: none;
 }
 element.normal.normal {
   background-color: @normal-background;
@@ -154,5 +153,6 @@ textbox-prompt-colon {
 
 configuration {
   drun-display-format: "{name}";
+  markup: false;
 }
 
